@@ -1,6 +1,6 @@
 # 🧪 lab-ai-agents
 
-> A plug-in framework for deploying AI agent workforces in scientific and regulated lab environments.
+> A plug-in framework for deploying AI agent workforces in scientific and lab environments.
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -12,7 +12,7 @@
 
 Most AI toolkits are built for general software teams. This one is built for labs — where compliance isn't optional, instrumentation matters, and the people reviewing your outputs need audit trails, not just answers.
 
-**lab-ai-agents** is a modular, plug-in framework that lets teams deploy AI agents — virtual QA reviewers, technical writers, documentation validators, and workflow processors — as a configurable workspace. Built on Node.js APIs with Python processing hooks, it is responsive, professionally themed, and designed so users can select exactly the agents and capabilities they need.
+**lab-ai-agents** is a modular, plug-in framework that lets teams deploy AI agents — virtual reviewers, technical writers, utility processors, and workflow processors — as a configurable workspace. Built on Node.js APIs with Python processing hooks, it is responsive, professionally themed, and designed so users can select exactly the agents and capabilities they need.
 
 ---
 
@@ -21,8 +21,7 @@ Most AI toolkits are built for general software teams. This one is built for lab
 | Feature | Description |
 |---|---|
 | 🔌 **Plug-in Architecture** | Select only the agents and modules your workspace needs. Drop in new capabilities without touching the core framework. |
-| 🤖 **Virtual Agent Workforce** | Deploy specialized AI agents — QA reviewers, technical writers, validators — each with defined roles and review gates. |
-| 🏭 **GMP & Compliance Aware** | Built with 21 CFR Part 11 and GAMP 5 in mind. Audit trails, electronic signatures, and validation hooks baked in. |
+| 🤖 **Virtual Agent Workforce** | Deploy specialized AI agents — reviewers, technical writers, code reviewers — each with defined roles and review gates. |
 | 🐍 **Python Processing Hooks** | Node.js handles the API layer; Python scripts handle data processing, ML inference, and scientific workflows behind each request. |
 | 📡 **REST API First** | Every agent and workflow is exposed as a REST endpoint — plug into existing LIMS, instrumentation software, or custom pipelines. |
 | 🎨 **Responsive & Themed UI** | Professionally styled, responsive interface. Dark/light mode, configurable workspace layout, built for real lab environments. |
@@ -41,7 +40,7 @@ Most AI toolkits are built for general software teams. This one is built for lab
 │  Plug-in WS  │  Routing     │  Workflow Scripts │
 ├──────────────┴──────────────┴───────────────────┤
 │              Agent Orchestration Layer           │
-│  Virtual QA · Tech Writer · Validator · Router  │
+│ Virtual · Tech Writer · Validator · Coordinator  │
 ├─────────────────────────────────────────────────┤
 │           Claude AI (via Anthropic API)          │
 │        Sonnet · Tool Use · Agent Loops           │
@@ -77,8 +76,8 @@ Claude AI   Python Script
 
 | Plug-in | Description |
 |---|---|
-| 📋 **QA Review Agent** | Virtual QA reviewer versed in GMP and 21 CFR Part 11 |
-| ✍️ **Tech Writer Agent** | Generates and validates regulated documentation |
+| 📋 **Review Agent** | Virtual reviewer versed in specific domains |
+| ✍️ **Tech Writer Agent** | Generates and validates code documentation |
 | 🔬 **Data Processor** | Python hooks for instrument data and assay results |
 | 🧠 **ML Inference** | ML.Net / ONNX / Python model integration |
 | 📊 **Report Builder** | Automated report generation with audit metadata |
@@ -119,7 +118,7 @@ npm start
 
 ```json
 {
-  "agents": ["qa-reviewer", "tech-writer", "data-processor"],
+  "agents": ["reviewer", "tech-writer", "data-processor"],
   "theme": "dark",
   "compliance": {
     "cfr_part_11": true,
@@ -132,20 +131,6 @@ npm start
   }
 }
 ```
-
----
-
-## 📋 Compliance & Audit
-
-> **GMP-aware by design.** This framework was built by someone who has spent 30 years in pharmaceutical and agricultural R&D under GLP and GMP requirements. Compliance features are architecture decisions, not afterthoughts.
-
-| Feature | Standard | Status |
-|---|---|---|
-| Audit trail on all agent actions | 21 CFR Part 11 | ✅ Included |
-| Electronic review & approval gates | 21 CFR Part 11 | ✅ Included |
-| Validation documentation hooks | GAMP 5 | ✅ Included |
-| Role-based agent permissions | GMP | ✅ Included |
-| Immutable action logs | 21 CFR Part 11 | ✅ Included |
 
 ---
 
@@ -176,7 +161,7 @@ lab-ai-agents/
 │   ├── ml/               # ML inference hooks
 │   └── processors/       # Data processing modules
 ├── plugins/              # Drop-in agent plug-ins
-│   ├── qa-reviewer/
+│   ├── reviewer/
 │   ├── tech-writer/
 │   ├── data-processor/
 │   └── lims-connector/
@@ -199,7 +184,7 @@ lab-ai-agents/
 
 ## 👤 About the Author
 
-Built by **Scott Castetter** — scientist and software developer with 30 years bridging the gap between the bench and the software that runs it. Custom LIMS systems, lab automation platforms, ML pipelines, and AI agent workflows for regulated pharma environments at Eli Lilly.
+Built by **Scott Castetter** — scientist and software developer with 30 years bridging the gap between the bench and the software that runs it. Custom LIMS systems, lab automation platforms, ML pipelines, and AI agent workflows.
 
 [LinkedIn](https://www.linkedin.com/in/scastetter/) · [GitHub](https://github.com/scott-castetter)
 

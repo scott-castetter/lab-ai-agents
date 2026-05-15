@@ -6,9 +6,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![Claude AI](https://img.shields.io/badge/Claude-Anthropic-D97757?style=flat-square)
-![GMP](https://img.shields.io/badge/GMP-Ready-2ea44f?style=flat-square)
-![21 CFR Part 11](https://img.shields.io/badge/21_CFR_Part_11-Compliant-red?style=flat-square)
-![GAMP 5](https://img.shields.io/badge/GAMP_5-Aware-blueviolet?style=flat-square)
 
 Most AI toolkits are built for general software teams. This one is built for labs — where compliance isn't optional, instrumentation matters, and the people reviewing your outputs need audit trails, not just answers.
 
